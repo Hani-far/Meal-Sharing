@@ -60,14 +60,17 @@ const FetchMeals =()=>{
                     </div>
                         }else{
                             if (meal.title.toLowerCase().includes(searchMeal)) {
+                                let fileAddress = `.\\public\\${meal.title}.jpg`;
                                 return <div key={meal.id} className="meal_container">
+                                    <div className="meal_image">
+                        <img src={fileAddress}></img>
+                        </div>
                         <div className="meal_title">
                             <h4 >{meal.title}</h4>
                         </div>
                         <div className="description">
                             <h4> Price: {meal.price}DKK</h4>
                             <h4> Location: {meal.location}</h4>
-                            {/* <h5>{stars ? <Stars stars={stars} /> : "No Reviews yet"}</h5> */}
                             <Link to={`meals/${meal.id}`}><button>Meal Details</button></Link>
                             <div>
                                 <Link to={`meals/${meal.id}/addreview`}><button>Add Review</button></Link>

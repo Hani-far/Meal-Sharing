@@ -92,7 +92,7 @@ router.get("/:id", async (request, response) => {
     response.json(mealById);
 
   } catch (error) {
-    response.status(500).json("Internal server error");
+    throw error;
   }
 });
 
