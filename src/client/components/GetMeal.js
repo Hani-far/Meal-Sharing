@@ -76,7 +76,7 @@ setTotalGuests(totalGuests);
         })
     }
 
-    let fileAddress = `.\\public\\${meal.id}.jpg`;
+    let fileAddress = `.\\public\\${meal.title}.jpg`;
     return (
         <div>
             

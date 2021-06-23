@@ -41,7 +41,7 @@ const FetchMeals =()=>{
                 <div className="display">
                     {meals.length > 0 ? meals.map((meal) => {
                         if (searchMeal=="") {
-                        let fileAddress = `.\\public\\${meal.id}.jpg`;
+                        let fileAddress = `.\\public\\${meal.title}.jpg`;
                         return <div key={meal.id} className="meal_container">
                         <div className="meal_image">
                         <img src={fileAddress}></img>
