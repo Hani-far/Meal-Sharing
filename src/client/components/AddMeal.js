@@ -59,7 +59,7 @@ const AddMeal = () => {
         setStatesEmpty();
     }
     return (
-
+    <div className="add-meal-background">
         <div className="add_meal_page">
             <div className="add_meal_info">
                 <h3>Would you like to become a Host ?</h3>
@@ -98,6 +98,7 @@ const AddMeal = () => {
             </form>
 
         </div>
+    </div>
     )
 
 }

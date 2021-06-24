@@ -45,12 +45,12 @@ const AddReview = () => {
         }
         setStatesEmpty();
     }
-    let fileAddress = `.\\public\\${meal.title}.jpg`;
+    
     return (
 
-        <div>
+        <div className="meal-review-page">
             <div className="review_info">
-                <img src={fileAddress} width="200px"></img>
+                <img src="https://pbs.twimg.com/media/D5kiYe5WwAA01QZ.jpg" width="200px"></img>
                 <h3 >Meal : {meal.title}</h3>
                 <h4>Description: {meal.description}</h4>
                 <h4>Price : {meal.price}DKK</h4>

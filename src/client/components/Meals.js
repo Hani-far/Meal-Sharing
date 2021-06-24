@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import MealsImages from "./MealsImages";
 
 const FetchMeals =()=>{
     const [meals, setMeals] = useState([]);
@@ -41,10 +42,16 @@ const FetchMeals =()=>{
                 <div className="display">
                     {meals.length > 0 ? meals.map((meal) => {
                         if (searchMeal=="") {
-                        let fileAddress = `.\\public\\${meal.title}.jpg`;
+                            let imgSrc = "";
+                            const imageForMeal = MealsImages.find(img => img.title == meal.title);
+                            if (imageForMeal) {
+                                imgSrc= imageForMeal.url;
+                            }else{
+                                imgSrc="https://i.pinimg.com/originals/e1/0a/20/e10a20f90ab20620e8b25ab616bcb22d.jpg";
+                            }
                         return <div key={meal.id} className="meal_container">
                         <div className="meal_image">
-                        <img src={fileAddress}></img>
+                        <img src={imgSrc}></img>
                         </div>
                         <div className="meal_title">
                             <h4 >{meal.title}</h4>
@@ -52,7 +59,7 @@ const FetchMeals =()=>{
                         <div className="description">
                             <h4> Price: {meal.price}DKK</h4>
                             <h4> Location: {meal.location}</h4>
-                            <Link to={`meals/${meal.id}`}><button>Meal Details</button></Link>
+                            <Link to={`meals/${meal.id}`}><button>Book reservation</button></Link>
                             <div>
                                 <Link to={`meals/${meal.id}/addreview`}><button>Add Review</button></Link>
                             </div>
@@ -60,10 +67,10 @@ const FetchMeals =()=>{
                     </div>
                         }else{
                             if (meal.title.toLowerCase().includes(searchMeal)) {
-                                let fileAddress = `.\\public\\${meal.title}.jpg`;
+                                const imageForMeal = MealsImages.find(img => img.title == meal.title);
                                 return <div key={meal.id} className="meal_container">
                                     <div className="meal_image">
-                        <img src={fileAddress}></img>
+                        <img src={imageForMeal.url}></img>
                         </div>
                         <div className="meal_title">
                             <h4 >{meal.title}</h4>

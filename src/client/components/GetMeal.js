@@ -1,6 +1,7 @@
 import AddReservation from "./AddReservation";
 import React, { useState, useEffect } from "react";
 import { useParams} from 'react-router-dom';
+import MealsImages from "./MealsImages";
 
 const GetMeal = ()=>{
     const [meal, setMeal] = useState({});
@@ -76,9 +77,9 @@ setTotalGuests(totalGuests);
         })
     }
 
-    let fileAddress = `.\\public\\${meal.title}.jpg`;
+    const imageForMeal = MealsImages.find(img => img.title == meal.title);
     return (
-        <div>
+        <div className="meal-info-page">
             
             {error !== null &&
                 <div> There was an error </div>
@@ -89,7 +90,7 @@ setTotalGuests(totalGuests);
             {error === null && !loading && meal !== null &&
             <div className="meal_reservation">
                 <div className="meal_info">
-                     <img src={fileAddress} width="200px"></img>
+                     <img src={imageForMeal.url} width="200px"></img>
                      <h3 >Meal : {meal.title}</h3>
                      <h4>Description: {meal.description}</h4>
                      <h4>Place: {meal.location}</h4>

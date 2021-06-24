@@ -11,7 +11,7 @@ const Header = () => {
             <ul className="navigation">
                 <Link to={"/"}>  <li>Home</li></Link>
                 <Link to={"/meals"}>  <li>Meals</li></Link>
-                <Link to={"/meals/addmeal"}>  <li>Create a new meal</li></Link>
+                <Link to={"/meals/addmeal"}>  <li>Become a host?</li></Link>
             </ul>
         </header>
     )

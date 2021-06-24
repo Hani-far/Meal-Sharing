@@ -1,7 +1,5 @@
 import React from "react";
 
-//FaFacebookF
-
 const Footer = () => {
 
     return (
