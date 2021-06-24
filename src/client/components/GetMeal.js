@@ -16,7 +16,7 @@ const GetMeal = ()=>{
     useEffect(() =>{
         const fetchingMealsApi = async() => {
             const API_URL = `/api/meals/${params.id}`;
-            console.log('url is: ', params.id);
+            
             try{
                 setLoading(true);
                 setError(null);
@@ -78,6 +78,12 @@ setTotalGuests(totalGuests);
     }
 
     const imageForMeal = MealsImages.find(img => img.title == meal.title);
+    let imgSrc = "";
+        if (imageForMeal) {
+            imgSrc= imageForMeal.url;
+        }else{
+            imgSrc="https://i.pinimg.com/originals/e1/0a/20/e10a20f90ab20620e8b25ab616bcb22d.jpg";
+        }
     return (
         <div className="meal-info-page">
             
@@ -90,7 +96,7 @@ setTotalGuests(totalGuests);
             {error === null && !loading && meal !== null &&
             <div className="meal_reservation">
                 <div className="meal_info">
-                     <img src={imageForMeal.url} width="200px"></img>
+                     <img src={imgSrc} width="200px"></img>
                      <h3 >Meal : {meal.title}</h3>
                      <h4>Description: {meal.description}</h4>
                      <h4>Place: {meal.location}</h4>
