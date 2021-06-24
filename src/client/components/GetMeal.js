@@ -15,7 +15,7 @@ const GetMeal = ()=>{
     const params = useParams();
     useEffect(() =>{
         const fetchingMealsApi = async() => {
-            const API_URL = `http://localhost:5000/api/meals/${params.id}`;
+            const API_URL = `/api/meals/${params.id}`;
             console.log('url is: ', params.id);
             try{
                 setLoading(true);
