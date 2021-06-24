@@ -224,6 +224,11 @@ padding:50px;
   color:rgb(33, 21, 61);
 }
 
+.meal_info{
+  background-color: rgba(69, 62, 82, 0.5);
+  color: white;
+}
+
 .add-meal-background{
   background-image: url("https://media.istockphoto.com/photos/white-wood-texture-picture-id1256912079?b=1&k=6&m=1256912079&s=170667a&w=0&h=vBgC1ukHRjntS8-P1-Cai4O5t6ShMIDonW4-KgLZyAQ=");
   background-size: cover;

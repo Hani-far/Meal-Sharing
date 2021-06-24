@@ -88,7 +88,6 @@ router.get("/:id", async (request, response) => {
       return;
     }
     const mealById = await knex("meals")
-      .where("id", mealId);
     response.json(mealById);
 
   } catch (error) {
