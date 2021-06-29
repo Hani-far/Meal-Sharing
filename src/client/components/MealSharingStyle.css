@@ -329,7 +329,7 @@ background-color: #292c35;
       padding: 2%;
     }
 
-    @media (max-width: 480px){
+    @media (max-width: 768px){
 
       h1{
           font-size: large;
