@@ -328,4 +328,64 @@ background-color: #292c35;
       width: 50%;
       padding: 2%;
     }
+
+    @media (max-width: 480px){
+
+      h1{
+          font-size: large;
+          font-weight: bold;
+          line-height: 1.5em;
+      }
+      
+      .search_meal_box h4{
+        font-size: 90%;
+        font-weight: bolder;
+        line-height: 1em;
+    }
+    
+      .wellcome{
+        margin-left: 35%;
+        margin-right:10%;
+        font-size: small;
+      } 
+    
+      .home-page input, button{
+          font-size: x-small;
+          height: fit-content;
+      }
+    
+      .meal_container{
+        padding: 5%;
+        margin: 5%;
+      }
+    
+      .meal_reservation{  
+        padding:6%;  
+        }
+        
+        .meal_info, .add_meal_page{
+          width: 100%;
+          font-size: small;
+          font-weight: bolder;
+          line-height: 1.1em;
+        }
+        
+        .meal_info img{
+          width: 100%;
+          height: 100%;
+        }
+    
+        .add_meal_form, .add_review_form, .add_reservation_form{
+          max-width:100%;
+        margin:10px auto;
+        padding: 1%;
+        font-size: smaller;
+        }
+        
+        .add_meal_form label, .add_review_form label, .add_reservation_form label{
+          font-size:smaller;
+          width: 50%;
+          padding: 2%;
+        }
+      }
 }
