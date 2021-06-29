@@ -282,7 +282,7 @@ background-color: #292c35;
     font-size: 90%;
     font-weight: bolder;
     line-height: 1em;
-}
+  }
 
   .wellcome{
     margin-left: 35%;
@@ -328,8 +328,8 @@ background-color: #292c35;
       width: 50%;
       padding: 2%;
     }
-
-    @media (max-width: 768px){
+  }
+    @media (max-width: 769px){
 
       h1{
           font-size: large;
@@ -388,4 +388,3 @@ background-color: #292c35;
           padding: 2%;
         }
       }
-}
