@@ -41,14 +41,14 @@ const FetchMeals =()=>{
                 
                 <div className="display">
                     {meals.length > 0 ? meals.map((meal) => {
-                        if (searchMeal=="") {
-                            let imgSrc = "";
-                            const imageForMeal = MealsImages.find(img => img.title == meal.title);
+                        let imgSrc = "";
+                        const imageForMeal = MealsImages.find(img => img.title == meal.title);
                             if (imageForMeal) {
                                 imgSrc= imageForMeal.url;
                             }else{
                                 imgSrc="https://i.pinimg.com/originals/e1/0a/20/e10a20f90ab20620e8b25ab616bcb22d.jpg";
                             }
+                        if (searchMeal=="") {
                         return <div key={meal.id} className="meal_container">
                         <div className="meal_image">
                         <img src={imgSrc}></img>
@@ -70,7 +70,7 @@ const FetchMeals =()=>{
                                 const imageForMeal = MealsImages.find(img => img.title == meal.title);
                                 return <div key={meal.id} className="meal_container">
                                     <div className="meal_image">
-                        <img src={imageForMeal.url}></img>
+                        <img src={imgSrc}></img>
                         </div>
                         <div className="meal_title">
                             <h4 >{meal.title}</h4>
