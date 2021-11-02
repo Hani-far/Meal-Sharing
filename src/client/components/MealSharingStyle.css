@@ -1,0 +1,390 @@
+
+.header{   
+  height:85px;  
+  background-color:rgb(47, 43, 100);  
+  display: flex;
+  justify-content: space-between; 
+  height: fit-content;
+}
+
+.logo_container img{
+  width: 40%;
+  height:100%;
+}
+
+.navigation{
+display: flex;
+flex-wrap: wrap; 
+color: white;
+ width: 50%;
+ justify-content: space-around;
+ margin-right: 10px;
+ align-items: center;
+ text-transform: uppercase;
+}
+
+.navigation a:hover{
+  color:rgb(47, 43, 100); 
+  background-color: white;
+  font-weight: bold; 
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.home-page{
+  display: flex;
+  align-items: center;
+  background-image: url("../assets/images/HomePagePic.png");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  width:100%;  
+  height:80%;
+}
+
+.home-page input{
+  background-color: rgb(216, 218, 228);
+}
+
+.wellcome{
+  height: fit-content;
+  width: 50%;
+  padding: 2%;
+  margin-left: 35%;
+  box-shadow:0px 0px 10px white;
+  background-color: rgba(207, 233, 207, 0.4);   
+  text-align: center !important;         
+  line-height: 2em; 
+  align-items: center; 
+} 
+
+.meals-container{ 
+  background-image: url("../assets/images/mealsPagePic.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: fit-content;
+}
+  
+.meal_container{
+  font-weight: bold;
+  background-color:rgb(239, 243, 220);
+  opacity: 0.8;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px gray;
+  padding: 10px;
+  border:none;
+  text-align: center;
+  margin: 20px;
+}
+
+.meal_container:hover{
+  opacity: 1;
+}
+
+.search_input{
+  margin-top: 3%;
+  width: 100%;
+  background-color: rgb(218, 228, 173);
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px gray;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.display{
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  }
+
+.description button{
+  margin: 10px;
+  background-color:rgb(47, 43, 100); 
+  color: white;
+  cursor: pointer;
+}
+
+.add_meal_form, .add_review_form, .add_reservation_form{
+  max-width:800px;
+margin:10px auto; 
+padding:10px 25px;
+border-radius:5px;
+border: 1px solid rgb(47, 43, 100);
+background-color:rgb(47, 43, 100) ;
+color: white;
+}
+
+.add_meal_form label, .add_review_form label, .add_reservation_form label{
+  display:inline-block;
+  width:40%;
+  padding:10px;
+  text-transform:uppercase;
+  font-size:14px;
+  font-weight: 600;
+  color:white;
+}
+
+.add_meal_form input, .add_meal_form textarea, 
+.add_review_form input, .add_review_form textarea, .add_review_form select,
+.add_reservation_form input{
+  display:inline-block;
+  width:60%;
+  box-shadow: 0px 0px 10px gray;
+  background-color: white;
+  margin-bottom: 5px;
+  padding:.5rem;
+  font-size:18px;
+  border-radius:5px;
+}
+
+.meal_submit_btn, .reservation_submit_btn, .review_submit_btn{ 
+background:rgb(90, 87, 136);
+padding:8px;
+display: block;
+color:white;
+margin:0px auto; 
+text-transform:uppercase;
+cursor:pointer;
+transition:.3s all ease;  
+}
+
+.meal_submit_btn:hover, .reservation_submit_btn:hover, .review_submit_btn:hover{
+  background:gray;
+}
+
+.search_meal_box span{
+  color: rgb(47, 43, 100);
+  font-size: larger; 
+}
+
+.search_meal_box h4{
+  font-size: larger; 
+}
+
+.meal_image img, .meal_info img{
+  width:250px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgb(63, 62, 62);
+}
+
+.search_meal_list{    
+  color: rgb(24, 12, 1);
+  font-weight: bolder;
+  line-height: 3em;
+}
+
+.meal-info-page{
+
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGrW0l5AGhNVDuNZZ7yEb0MLL45TOizWOV8SGlyhHCGgtU5TQNXiCzwIusQ3lV2FQM0vk&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.meal-review-page{
+  background-image: url("https://media.gettyimages.com/videos/particles-blue-background-video-id1132489247?s=640x640");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.search_meal{
+cursor: pointer;  
+font-size: larger;
+color: black;
+list-style: none;
+}
+
+.meal_reservation{  
+padding:50px;  
+}
+
+.meal_info, .add_meal_page{
+  width:60%;
+  height: fit-content;
+  margin: 10px auto;
+  padding: 15px;    
+  background-color: rgba(102, 38, 38, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  line-height: 1.1em;
+  color:rgb(33, 21, 61);
+}
+
+.meal_info{
+  background-color: rgba(69, 62, 82, 0.5);
+  color: white;
+}
+
+.add-meal-background{
+  background-image: url("https://media.istockphoto.com/photos/white-wood-texture-picture-id1256912079?b=1&k=6&m=1256912079&s=170667a&w=0&h=vBgC1ukHRjntS8-P1-Cai4O5t6ShMIDonW4-KgLZyAQ=");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.review_info{
+  width:60%;
+  height: fit-content;
+  margin: 2px auto;
+  padding: 15px;    
+  background-color: rgba(17, 42, 49, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  line-height: 1.5em;
+  color:rgb(239, 238, 245);
+}
+
+.add-meal img, .review_info img{
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgb(63, 62, 62);
+}
+
+.footer{
+background-color: #292c35;
+  padding:1%;
+  color: white;
+  height: fit-content
+}
+
+@media (max-width: 480px){
+
+  h1{
+      font-size: large;
+      font-weight: bold;
+      line-height: 1.5em;
+  }
+
+  .navigation{
+      flex-direction: column;
+      font-size: 55%;
+      font-weight: bolder;
+      width: 100%;
+  }
+  
+  .search_meal_box h4{
+    font-size: 90%;
+    font-weight: bolder;
+    line-height: 1em;
+  }
+
+  .wellcome{
+    margin-left: 35%;
+    margin-right:10%;
+    font-size: small;
+  } 
+
+  .home-page input, button{
+      font-size: x-small;
+      height: fit-content;
+  }
+
+  .meal_container{
+    padding: 5%;
+    margin: 5%;
+  }
+
+  .meal_reservation{  
+    padding:6%;  
+    }
+    
+    .meal_info, .add_meal_page{
+      width: 100%;
+      font-size: small;
+      font-weight: bolder;
+      line-height: 1.1em;
+    }
+    
+    .meal_info img{
+      width: 100%;
+      height: 100%;
+    }
+
+    .add_meal_form, .add_review_form, .add_reservation_form{
+      max-width:100%;
+    margin:10px auto;
+    padding: 1%;
+    font-size: smaller;
+    }
+    
+    .add_meal_form label, .add_review_form label, .add_reservation_form label{
+      font-size:smaller;
+      width: 50%;
+      padding: 2%;
+    }
+  }
+    @media (max-width: 769px){
+
+      h1{
+          font-size: large;
+          font-weight: bold;
+          line-height: 1.5em;
+      }
+      
+      .search_meal_box h4{
+        font-size: 90%;
+        font-weight: bolder;
+        line-height: 1em;
+    }
+    
+      .wellcome{
+        margin-left: 35%;
+        margin-right:10%;
+        font-size: small;
+      } 
+    
+      .home-page input, button{
+          font-size: x-small;
+          height: fit-content;
+      }
+    
+      .meal_container{
+        padding: 5%;
+        margin: 5%;
+      }
+    
+      .meal_reservation{  
+        padding:6%;  
+        }
+        
+        .meal_info, .add_meal_page{
+          width: 100%;
+          font-size: small;
+          font-weight: bolder;
+          line-height: 1.1em;
+        }
+        
+        .meal_info img{
+          width: 100%;
+          height: 100%;
+        }
+    
+        .add_meal_form, .add_review_form, .add_reservation_form{
+          max-width:100%;
+        margin:10px auto;
+        padding: 1%;
+        font-size: smaller;
+        }
+        
+        .add_meal_form label, .add_review_form label, .add_reservation_form label{
+          font-size:smaller;
+          width: 50%;
+          padding: 2%;
+        }
+      }
